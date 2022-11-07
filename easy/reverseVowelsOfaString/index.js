@@ -1,4 +1,4 @@
-function reverseVowels(s: string): string {
+function reverseVowels(s) {
   const vowels = ["a", "e", "i", "o", "u"];
   const revers = [];
   const arr = s.split("");
@@ -15,3 +15,5 @@ function reverseVowels(s: string): string {
   }
   return result.join("");
 }
+
+console.log(reverseVowels("aisdf"));
