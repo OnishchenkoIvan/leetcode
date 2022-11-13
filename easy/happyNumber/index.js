@@ -19,4 +19,4 @@ var isHappy = function (m) {
   return sum(m);
 };
 
-console.log(isHappy(7));
+console.log(isHappy(9));
