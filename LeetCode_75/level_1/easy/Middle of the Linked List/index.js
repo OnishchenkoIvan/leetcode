@@ -1,4 +1,4 @@
-const middleNode = function (head) {
+var middleNode = function (head) {
   let fast = head;
   while (fast != null && fast.next != null) {
     head = head.next;
