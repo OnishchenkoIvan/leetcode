@@ -1,10 +1,17 @@
 var isIsomorphic = function (s, t) {
   if (s.length !== t.length) return false;
-  const sArr = s.split("");
-  const tArr = t.split("");
-  for (let i = 0; i < sArr.length; i += 1) {
-    let temp = tArr[i];
+  const arr1 = {};
+  const arr2 = {};
+  for (let i = 0; i < s.length; i += 1) {
+    if (arr1[s[i]] !== arr2[t[i]]) {
+      return false;
+    } else {
+      (arr1[s[i]] = i), (arr2[t[i]] = i);
+    }
   }
+  return true;
 };
-
-console.log(isIsomorphic("egg", "add"));
+//
+// console.log(isIsomorphic("egg", "add"));
+// console.log(isIsomorphic("foo", "bar"));
+console.log(isIsomorphic("paper", "title"));
